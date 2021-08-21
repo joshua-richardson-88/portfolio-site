@@ -4,14 +4,21 @@ import React from 'react'
 // project files
 import { Section, SectionDivider, SectionTitle } from '../../styles/GlobalComponents'
 import { Box, Boxes, BoxNum, BoxText } from './AccomplishmentsStyles'
+import { accomplishments } from '../../constants'
+import { data } from 'browserslist'
 
-const data = [
-  { number: 20, text: 'Open Source Projects' },
-  { number: 1000, text: 'Students' },
-  { number: 1900, text: 'Github Followers' },
-  { number: 5000, text: 'Github Stars' },
-]
-
-const Accomplishments = () => <div>Accomplishments</div>
+const Accomplishments = () => (
+  <Section>
+    <SectionTitle>Personal Achievements</SectionTitle>
+    <Boxes>
+      {accomplishments.map(({ number, text }, index) => (
+        <Box key={index}>
+          <BoxNum>{number}+</BoxNum>
+          <BoxText>{text}</BoxText>
+        </Box>
+      ))}
+    </Boxes>
+  </Section>
+)
 
 export default Accomplishments

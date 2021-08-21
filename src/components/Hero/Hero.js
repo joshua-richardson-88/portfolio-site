@@ -8,6 +8,7 @@ import Button from '../../styles/GlobalComponents/Button'
 
 const Hero = (props) => {
   const handleClick = () => (window.location = 'https://google.com')
+
   return (
     <Section row nopadding>
       <LeftSection>

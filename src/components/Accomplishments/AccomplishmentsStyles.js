@@ -4,7 +4,7 @@ import styled from 'styled-components'
 export const Boxes = styled.div`
   width: 100%;
   display: grid;
-  grid-template-columns: repeat() (4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 24px;
   margin: 24px 0 40px;
 
@@ -22,7 +22,7 @@ export const Boxes = styled.div`
   }
 `
 export const Box = styled.div`
-  background: hsl(220, 35, 20);
+  background: hsl(220, 35%, 20%);
   border-radius: 12px;
   height: 144px;
   padding: 24px;
