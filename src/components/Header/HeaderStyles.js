@@ -1,3 +1,6 @@
+// react
+import React from 'react'
+
 // modules
 import { IoIosArrowDropdown } from 'react-icons/io'
 import styled from 'styled-components'
@@ -17,6 +20,9 @@ export const Container = styled.div`
     grid-column-gap: 0.5rem;
     grid-row-gap: 0.5rem;
   }
+`
+export const Span = styled.span`
+  font-size: 2rem;
 `
 export const Div1 = styled.div`
   grid-area: 1 / 1 / 2 / 2;
@@ -48,7 +54,7 @@ export const Div3 = styled.div`
     grid-area: 1 / 4 / 2 / 6;
   }
 `
-export const NavLink = styled.a`
+const Anchor = styled.a`
   font-size: 2rem;
   line-height: 32px;
   color: hsla(0, 0%, 100%, 0.75);
@@ -64,6 +70,14 @@ export const NavLink = styled.a`
     padding: 0.5rem;
   }
 `
+export const NavLinks = React.forwardRef(({ onClick, href, children }, ref) => {
+  return (
+    <Anchor href={href} onClick={onClick} ref={ref}>
+      {children}
+    </Anchor>
+  )
+})
+NavLinks.displayName = 'NavLinks'
 export const ContactDropDown = styled.button`
   border: none;
   display: flex;
@@ -111,6 +125,9 @@ export const SocialIcons = styled.a`
   color: white;
   border-radius: 50px;
   padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &:hover {
     background-color: hsl(220, 35%, 20%);
