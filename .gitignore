@@ -18,7 +18,7 @@
 # misc
 .DS_Store
 *.pem
-addKey.sh
+commit.sh
 
 # debug
 npm-debug.log*

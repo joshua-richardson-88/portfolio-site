@@ -5,11 +5,20 @@ import React from 'react'
 import { IoIosArrowDropdown } from 'react-icons/io'
 import styled from 'styled-components'
 
+// project files
+import theme from '../../themes/default'
+
 export const Container = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: 1fr;
   grid-column-gap: 2rem;
+  background-color: ${(props) => props.theme.colors.backgroundPrimary};
   padding: 1rem;
   padding-top: 2rem;
 
